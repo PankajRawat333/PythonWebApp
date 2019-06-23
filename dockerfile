@@ -2,12 +2,12 @@
 FROM python:3
 
 # Set the working directory to /app
-WORKDIR /PyApp
+WORKDIR /app
 
-COPY requirements.txt ./
+COPY . /app
+#COPY requirements.txt ./app
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
